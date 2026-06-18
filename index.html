@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Overfit</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b0b0a;
+        --ink: #f2f0e8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        margin: 0;
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        overflow-x: hidden;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          var(--bg);
+        background-size: 24px 24px;
+        color: var(--ink);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+      }
+
+      main {
+        width: 100%;
+        padding: clamp(10px, 2vw, 28px);
+      }
+
+      .ascii-wrap {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .ascii {
+        margin: 0;
+        width: max-content;
+        max-width: 100%;
+        color: var(--ink);
+        font-size: clamp(5px, 2.92vw, 46px);
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0;
+        text-shadow: 0 0 18px rgba(242, 240, 232, 0.22);
+        white-space: pre;
+      }
+
+      @media (max-width: 560px) {
+        main {
+          padding-inline: 8px;
+        }
+
+        .ascii {
+          font-size: 2.84vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main aria-label="Overfit ASCII art">
+      <div class="ascii-wrap">
+        <pre class="ascii" aria-label="Overfit">
+ ██████╗ ██╗   ██╗███████╗██████╗ ███████╗██╗████████╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗██╔════╝██║╚══██╔══╝
+██║   ██║██║   ██║█████╗  ██████╔╝█████╗  ██║   ██║
+██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗██╔══╝  ██║   ██║
+╚██████╔╝ ╚████╔╝ ███████╗██║  ██║██║     ██║   ██║
+ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝   ╚═╝
+        </pre>
+      </div>
+    </main>
+  </body>
+</html>
